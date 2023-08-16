@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    overflow-x: hidden !important;
+    font-family: 'Cabin', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 10%;
+    background-color: rgb(142, 45, 226);
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff1f2;
+}
+/* Navbar start here  */
+.nav {
+    background-color: #212121;
+}
+.nav .tronics {
+    color: rgb(142, 45, 226);
+}
+.nav .cart-count {
+    background: rgb(142, 45, 226);
+    padding: 2.5px;
+    line-height: 1;
+    border-radius: 10px;
+}
+.sticky-header {
+    background-color: #212121;
+    color: white;
+    position: sticky;
+    top: 0;
+    transform: translateY(-70px);
+    animation: StickyHeader 0.3s ease forwards;
+    z-index: 98;
+}
+@keyframes StickyHeader {
+    0% {
+        transform: translateY(-70px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Navbar end here */
+
+/* Banner start here */
+.hero-banner {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+/* Banner end here */
+
+/* Products section start here */
+.section-heading::after {
+    content: '';
+    display: block;
+    margin-top: 5px;
+    width: 50px;
+    height: 3px;
+    background-color: #8e2de2;
+}
+/* Products section end here */
+/* Catagory start here */
+.catagory-container .products-container {
+    margin: 35px 0px;
+    padding: 0;
+}
+/* Catagory end here */
+/* Cart start here */
+.slideCartWindow {
+    transform: translateX(100%);
+    animation: slideCartWindow 0.3s ease forwards;
+}
+@keyframes slideCartWindow {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* Cart end here */
+
+/* newsletter section start here */
+.newsletter-section {
+    background: #f9f9f9 url(/src/assests/newsletter-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* newsletter section end here */
+
+/* Search model */
+
+.search-modal-show {
+    transform: translateY(100%);
+    animation: slideSearchWindow 0.5s ease forwards;
+}
+@keyframes slideSearchWindow {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
